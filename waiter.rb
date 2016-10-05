@@ -16,7 +16,9 @@ class Waiter
     case menu
       when 1
       p "Let me get the menu"
+      "Let me get the menu"
       list_menu
+      order_food(gets.chomp.to_i)
       when 2
       p "Thank you for your visit"
       else
@@ -33,9 +35,13 @@ class Waiter
   end
 
   def list_menu
-    @menu.contents.each do |dish|
-      p "#{dish.name}"
+    @menu.contents.each_with_index do |dish, index|
+      p "#{index}. #{dish.name}"
     end
+  end
+
+  def order_food(choice)
+    dish = @menu.contents[ choice ]
   end
 
 end

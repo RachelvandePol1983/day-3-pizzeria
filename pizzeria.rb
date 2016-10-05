@@ -1,6 +1,8 @@
 require './waiter'
-
 require './menu'
+require './kitchen'
+
+kitchen = Kitchen.new
 
 menu = Menu.new
 
