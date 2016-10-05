@@ -1,7 +1,16 @@
 require './dish'
 
 class Menu
-  def initialize(dish_name)
-    @name = dish_name
+  def initialize
+    @menu = []
+
+    @menu << Dish.new("Margherita")
+    @menu << Dish.new("Napoletana")
+    @menu << Dish.new("Peperoni")
+  end
+
+  def contents
+    @menu
+  end
 
 end
